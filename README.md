@@ -50,8 +50,6 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/W2AlharbiMe/eri/blob/v1.0.0/src/commands/hello.ts)_
-
 ## `eri help [COMMAND]`
 
 display help for eri
@@ -85,7 +83,6 @@ COMMANDS
   make:controller  generate controller
 ```
 
-_See code: [src/commands/make/index.ts](https://github.com/W2AlharbiMe/eri/blob/v1.0.0/src/commands/make/index.ts)_
 
 ## `eri make:controller NAME`
 
@@ -107,5 +104,4 @@ EXAMPLE
   $ eri controller mycontroller
 ```
 
-_See code: [src/commands/make/controller.ts](https://github.com/W2AlharbiMe/eri/blob/v1.0.0/src/commands/make/controller.ts)_
 <!-- commandsstop -->
