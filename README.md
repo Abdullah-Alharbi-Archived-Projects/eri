@@ -82,6 +82,9 @@ OPTIONS
 
 EXAMPLE
   $ eri make:<topic>
+
+COMMANDS
+  make:controller  generate controller
 ```
 
 _See code: [src/commands/make/index.ts](https://github.com/W2AlharbiMe/eri/blob/v1.0.0/src/commands/make/index.ts)_
