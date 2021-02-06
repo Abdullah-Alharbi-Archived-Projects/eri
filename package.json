@@ -44,6 +44,8 @@
     "commands": "./lib/commands",
     "bin": "eri",
     "topics": {
+      "make": { "description": "make suit" },
+      "make:controller": { "description": "generate controller" }
     },
     "plugins": [
       "@oclif/plugin-help"
