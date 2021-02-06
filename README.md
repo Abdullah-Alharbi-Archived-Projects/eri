@@ -5,7 +5,6 @@ cli for express-boilerplate
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/eri.svg)](https://npmjs.org/package/eri)
-[![Downloads/week](https://img.shields.io/npm/dw/eri.svg)](https://npmjs.org/package/eri)
 [![License](https://img.shields.io/npm/l/eri.svg)](https://github.com/W2AlharbiMe/eri/blob/master/package.json)
 
 <!-- toc -->
