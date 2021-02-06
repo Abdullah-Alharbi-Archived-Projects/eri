@@ -29,6 +29,8 @@ USAGE
 <!-- commands -->
 * [`eri hello [FILE]`](#eri-hello-file)
 * [`eri help [COMMAND]`](#eri-help-command)
+* [`eri make`](#eri-make)
+* [`eri make:controller NAME`](#eri-makecontroller-name)
 
 ## `eri hello [FILE]`
 
@@ -66,4 +68,43 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.2/src/commands/help.ts)_
+
+## `eri make`
+
+generate anything
+
+```
+USAGE
+  $ eri make
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ eri make:<topic>
+```
+
+_See code: [src/commands/make/index.ts](https://github.com/W2AlharbiMe/eri/blob/v1.0.0/src/commands/make/index.ts)_
+
+## `eri make:controller NAME`
+
+generate controller
+
+```
+USAGE
+  $ eri make:controller NAME
+
+ARGUMENTS
+  NAME  controller name
+
+OPTIONS
+  -h, --help         show CLI help
+  -p, --path=path    change generate path
+  -r, --resourceful  create resourceful controller
+
+EXAMPLE
+  $ eri controller mycontroller
+```
+
+_See code: [src/commands/make/controller.ts](https://github.com/W2AlharbiMe/eri/blob/v1.0.0/src/commands/make/controller.ts)_
 <!-- commandsstop -->
