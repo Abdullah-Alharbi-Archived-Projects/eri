@@ -1,0 +1,26 @@
+const knex = require('../index');
+const { Model } = require('objection');
+
+Model.knex(knex);
+
+class {{name}} extends Model {
+    static get tableName() {
+        return '{{table}}';
+    }
+
+    static get idColumn() {
+        return 'id';
+    }
+
+    static get jsonSchema() {
+        return {
+            
+        };
+    }
+
+}
+
+
+
+module.exports = {{name}};
+
