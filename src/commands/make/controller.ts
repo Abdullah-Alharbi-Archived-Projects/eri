@@ -1,6 +1,7 @@
-import {Command, flags} from '@oclif/command'
+import { Command, flags } from '@oclif/command'
 import * as handlebars from 'handlebars';
 import * as fs from 'fs';
+import get from '../../helpers/get';
 
 export default class Controller extends Command {
   static description = 'generate controller'
@@ -10,28 +11,26 @@ export default class Controller extends Command {
   ]
 
   static flags = {
-    help: flags.help({char: 'h'}),
-    // name: flags.string({char: 'n', description: 'controller name', required: true}),
+    help: flags.help({ char: 'h' }),
+
+    api: flags.boolean({ char: 'a', description: "append .api in controller name", }),
+
     resourceful: flags.boolean({ char: 'r', description: "create resourceful controller", }),
-    path: flags.string({ char: 'p', description: "change generate path" })
+
+    path: flags.string({ char: 'p', description: "change generate path" }),
   }
 
-  static args = [{name: 'name', description: 'controller name', required: true}]
+  static args = [
+    { name: 'name', description: 'controller name', required: true },
+  ]
 
   async run() {
-    const {args, flags} = this.parse(Controller);
-    let componentPath = './src/components/controllers';
+    const { args, flags } = this.parse(Controller);
+    const api = flags.api ? '.api' : '';
 
-    if (flags.resourceful) {
-      componentPath += '/controller.resourceful.hbs';
-    } else {
-      componentPath += '/controller.def.hbs';
-    }
+    const component = get(flags.resourceful ? 'controller.resourceful' : 'controller', args);
 
-    const component = fs.readFileSync(componentPath, 'utf-8');
-    const compiledComponent = handlebars.compile(component)({ name: args.name });
-
-    fs.writeFileSync(`${args.name}.js`, compiledComponent);
-    this.log(`✔ Generated ${args.name}.js`);
+    fs.writeFileSync(`${args.name}${api}.js`, component);
+    this.log(`✔ Generated ${args.name}${api}.js`);
   }
 }
